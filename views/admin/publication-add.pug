@@ -1,0 +1,28 @@
+extends ../layout
+
+block layout-content
+  div.buttons 
+    a(href="/" class="btn admin-button") Back
+  div.form-content
+    div.form-area
+      h1.page-title Add Publication
+      form(method="post", action="/admin/publication/add/submit")
+        div.form-group
+          label(for="weight", class="form-label") Weight: 
+          input(type="number", id="weight", name="weight", class="form-control", required)
+        div.form-group
+          label(for="journal", class="form-label") Journal: 
+          input(type="text", id="journal", name="journal", class="form-control", placeholder="journal organization", required)
+        div.form-group 
+          label(for="title", class="form-label") Title: 
+          input(type="text", id="title", name="title", class="form-control",  placeholder="journal title", required)
+        div.form-group
+          label(for="contributor", class="form-label") Contributors: 
+          input(type="text", id="contributor", name="contributor", class="form-control", placeholder="e.g. Adebowale.U", required)
+        div.form-group
+          label(for="year", class="form-label") Year: 
+          input(type="number", id="year", name="year", class="form-control", placeholder="e.g. 2009", required)
+        div.form-group
+          label(for="link", class="form-label") Link: 
+          input(type="text", id="link", name="link", class="form-control", placeholder="if available")
+        button(type="submit" class="btn btn-primary") Add Publication

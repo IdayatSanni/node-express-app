@@ -1,0 +1,14 @@
+doctype html
+html
+  head 
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title} | Test website
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    //- header#header-container is the shortcut for header(id="header-container")
+    include includes/header.pug
+    main#main-content 
+      //- specify a dynamic block named layout-content
+      block layout-content
+    footer#footer-content 
+      p &copy; Copyright HTTP5222, 2024.

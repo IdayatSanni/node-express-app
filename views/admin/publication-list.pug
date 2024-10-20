@@ -1,0 +1,26 @@
+extends ../layout
+
+block layout-content 
+  h1.page-title Publications Admin
+  div.buttons
+    a(href="/" class="btn admin-button") Back
+    a(href="/admin/publication/add" class="btn admin-button") Add New Publication
+
+  table
+    thead
+      tr
+        th.col Title
+        th.col Journal
+        th.col Year
+        th.col Contributors
+    tbody
+      each publ in publication
+        tr
+          td.row #{publ.title}
+          td.row
+            if publ.link
+              a(href=publ.link, target="_blank") #{publ.journal}
+            else
+              | #{publ.journal}
+          td.row #{publ.year}
+          td.row #{publ.contributor}

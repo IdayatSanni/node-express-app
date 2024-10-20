@@ -1,0 +1,22 @@
+extends ../layout
+
+block layout-content 
+  div.buttons 
+    a(href="/" class="btn admin-button") Back
+  div.form-content
+    div.form-area
+      h1.page-title Add Award
+      form(method="post", action="/admin/award/add/submit")
+        div.form-group
+          label(for="weight", class="form-label") Weight: 
+          input(type="number", id="weight", name="weight", class="form-control", required)
+        div.form-group
+          label(for="award", class="form-label") Award Name: 
+          input(type="text", id="award", name="award", placeholder="e.g. Best scientist", required, class="form-control")
+        div.form-group
+          label(for="organization", class="form-label") Organization: 
+          textarea(id="organization", name="organization", placeholder="e.g. Award for contributing", required, class="form-control")
+        div.form-group
+          label(for="year", class="form-label") Year: 
+          input(type="number", id="year", name="year", placeholder="e.g. 2023", required, class="form-control")
+        button(type="submit", class="btn btn-primary") Add Award

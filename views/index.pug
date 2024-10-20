@@ -1,0 +1,15 @@
+extends layout 
+
+block layout-content 
+  h1 Welcome to Your Admin Page
+  p Manage your content here!
+  
+  h2 Awards
+  div.buttons
+    a(href="/admin/award" class="btn admin-button") View Awards
+    a(href="/admin/award/add" class="btn admin-button") Add Award
+
+  h2 Publications
+  div.buttons
+    a(href="/admin/publication" class="btn admin-button") View Publications
+    a(href="/admin/publication/add" class="btn admin-button") Add Publication

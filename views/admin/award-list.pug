@@ -1,0 +1,19 @@
+extends ../layout
+
+block layout-content 
+  h1.page-title Awards Admin
+  div.buttons
+    a(href="/" class="btn admin-button") Back
+    a(href="/admin/award/add" class="btn admin-button") Add New Award
+    table
+      thead
+        tr
+          th Award Name 
+          th Year 
+          th Description 
+      tbody 
+        each aw in award
+          tr 
+            td #{aw.award}
+            td #{aw.organization}
+            td #{aw.awardDate}
