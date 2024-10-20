@@ -32,7 +32,7 @@ router.post("/admin/publication/add/submit", async (request, response) => {
   //for a POST form, field values are passed in request.body.<field_name>
   //we can do this because of the setting to convert the urlencoded data to JSON
   let newPublication = {
-    weight: request.body.weight,
+    weight: parseFloat(request.body.weight),
     journal: request.body.journal,
     title: request.body.title,
     contributor: request.body.contributor,

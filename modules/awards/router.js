@@ -32,7 +32,7 @@ router.post("/admin/award/add/submit", async (request, response) => {
   //for a POST form, field values are passed in request.body.<field_name>
   //we can do this because of the setting to convert the urlencoded data to JSON
   let newAward = {
-    weight: request.body.weight,
+    weight: parseFloat(request.body.weight),
     award: request.body.award,
     organization: request.body.organization,
     awardDate: request.body.awardDate,
