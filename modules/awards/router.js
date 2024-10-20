@@ -35,10 +35,10 @@ router.post("/admin/award/add/submit", async (request, response) => {
     weight: request.body.weight,
     award: request.body.award,
     organization: request.body.organization,
-    year: request.body.awardDate,
+    awardDate: request.body.awardDate,
   };
   await model.addAward(newAward);
-  response.redirect("admin/award");
+  response.redirect("/admin/award");
 });
 
 module.exports = router;

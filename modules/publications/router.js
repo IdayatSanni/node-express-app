@@ -40,7 +40,7 @@ router.post("/admin/publication/add/submit", async (request, response) => {
     link: request.body.link,
   };
   await model.addPublication(newPublication);
-  response.redirect("admin/publication");
+  response.redirect("/admin/publication");
 });
 
 module.exports = router;
