@@ -161,7 +161,7 @@ th {
   }
 
   th {
-    display: none;
+    display: block;
   }
 
   tr {
