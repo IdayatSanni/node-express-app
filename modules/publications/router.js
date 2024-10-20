@@ -36,7 +36,7 @@ router.post("/admin/publication/add/submit", async (request, response) => {
     journal: request.body.journal,
     title: request.body.title,
     contributor: request.body.contributor,
-    year: request.body.year,
+    year: parseInt(request.body.year, 10),
     link: request.body.link,
   };
   await model.addPublication(newPublication);

@@ -35,7 +35,7 @@ router.post("/admin/award/add/submit", async (request, response) => {
     weight: parseFloat(request.body.weight),
     award: request.body.award,
     organization: request.body.organization,
-    awardDate: request.body.awardDate,
+    awardDate: parseInt(request.body.awardDate, 10),
   };
   await model.addAward(newAward);
   response.redirect("/admin/award");
