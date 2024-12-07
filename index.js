@@ -26,11 +26,9 @@ app.use("/", apiAwardRouter);
 app.use("/", apiPublicationRouter);
 
 //SET UP CORS TO ACCEPT REQUESTS FROM ANY ORIGIN
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors());
+
+
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
